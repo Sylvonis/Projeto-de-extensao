@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { View, TextInput, StyleSheet, Text, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
-import { Pressable } from "react-native"; // Importe o Pressable
+import { Pressable } from "react-native";
 
 export default function ProductFormScreen({ route }) {
   const navigation = useNavigation();
   const { product } = route.params || {}; // Recebe os dados do produto, se existir
   const [name, setName] = useState(product?.name || ""); // Inicializa com dados do produto, se houver
-  const [quantity, setQuantity] = useState(product?.quantity?.toString() || ""); // Similar ao name
-  const [price, setPrice] = useState(product?.price?.toString() || ""); // Similar ao quantity
+  const [quantity, setQuantity] = useState(product?.quantity?.toString() || "");
+  const [price, setPrice] = useState(product?.price?.toString() || "");
 
   const saveProduct = async () => {
     // Validação para garantir que quantidade e preço sejam números válidos

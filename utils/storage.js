@@ -1,7 +1,6 @@
-// utils/storage.js
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// Função para salvar produtos no AsyncStorage
+// Função para salvar o produto no AsyncStorage
 export const saveProducts = async (products) => {
   try {
     await AsyncStorage.setItem('products', JSON.stringify(products));
@@ -21,7 +20,7 @@ export const loadProducts = async () => {
   }
 };
 
-// Função para excluir um produto do AsyncStorage
+// Função para excluir o produto do AsyncStorage
 export const deleteProduct = async (id, products) => {
   try {
     const updatedProducts = products.filter((product) => product.id !== id);

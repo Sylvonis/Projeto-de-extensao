@@ -6,13 +6,13 @@ const ProductItem = ({ item, onDelete, onEdit, buttonText }) => {
     <View style={styles.container}>
       <Text style={styles.text}>Nome: {item.name}</Text>
       <Text style={styles.text}>Preço: R$ {item.price}</Text>
-      <Text style={styles.text}>Quantidade: {item.quantity}</Text> {/* Exibindo a quantidade */}
+      <Text style={styles.text}>Quantidade: {item.quantity}</Text> 
       <View style={styles.actions}>
         <Pressable onPress={() => onEdit(item)} style={styles.editButton}>
           <Text style={styles.buttonText}>Editar</Text>
         </Pressable>
         <Pressable onPress={() => onDelete(item.id)} style={styles.deleteButton}>
-          <Text style={styles.buttonText}>{buttonText}</Text> {/* Texto alterado */}
+          <Text style={styles.buttonText}>{buttonText}</Text>
         </Pressable>
       </View>
     </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    elevation: 3, // Sombra no Android
+    elevation: 3, 
   },
   text: {
     marginBottom: 8,
@@ -42,21 +42,21 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  // Estilos para o botão de edição
+
   editButton: {
-    backgroundColor: "#007bff", // Cor azul para editar
+    backgroundColor: "#007bff", 
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 4,
   },
-  // Estilos para o botão de exclusão
+
   deleteButton: {
-    backgroundColor: "#d9534f", // Cor vermelha para excluir
+    backgroundColor: "#d9534f",
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 4,
   },
-  // Estilo do texto dentro dos botões
+
   buttonText: {
     color: "#fff",
     fontSize: 16,

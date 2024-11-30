@@ -3,7 +3,7 @@ import { View, Button, Alert, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { FlatList } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import ProductItem from '../components/ProductItem'; // Ensure this component exists and works correctly
+import ProductItem from '../components/ProductItem';
 
 const ProductListScreen = ({ navigation }) => {
   const [products, setProducts] = useState([]);
